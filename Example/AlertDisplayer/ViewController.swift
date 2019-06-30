@@ -7,18 +7,71 @@
 //
 
 import UIKit
+import AlertDisplayer
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var alertDisplayer: AlertDisplayer!
+    
+    var text: String!
+    var titleText: String!
+    var leftText: String!
+    var rightText: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        self.view.backgroundColor = .clear
+        self.alertDisplayer.configureWith(self)
+        
+        self.view.bringSubviewToFront(self.alertDisplayer)
+        // Do any additional setup after loading the view.
     }
+    
+}
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+extension ViewController: AlertDisplayerDelegate{
+    
+    func setUpButtons() {
+        self.alertDisplayer.setUpButtons("Aceptar")
     }
-
+    
+    //Optional Method to set UIImage
+    /*func setExitImage() -> UIImage? {
+        return nil
+    }*/
+    
+    func setFont(to label: UILabel) {
+        label.font = UIFont.systemFont(ofSize: 15)
+    }
+    
+    func setBoldFont(to label: UILabel) {
+        label.font = UIFont.systemFont(ofSize: 20, weight: .bold)
+    }
+    
+    func alertDisplayerDidLoad() {
+        //Aditional Setup
+        
+        self.alertDisplayer.normalLabel.text = text
+        self.alertDisplayer.boldLabel.text = titleText
+        
+        if(self.rightText != nil){
+            self.alertDisplayer.setUpButtons(self.leftText, self.rightText)
+        }else{
+            self.alertDisplayer.setUpButtons(self.leftText)
+        }
+    }
+    
+    func didPressOk() {
+        print("didPressOkDelegate")
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    func didPressCancel() {
+        print("didPressCancelDelegate")
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    
 }
 

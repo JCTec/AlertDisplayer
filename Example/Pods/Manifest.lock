@@ -1,27 +1,16 @@
 PODS:
   - AlertDisplayer (0.1.0)
-  - Nimble (7.0.3)
-  - Quick (1.2.0)
 
 DEPENDENCIES:
   - AlertDisplayer (from `../`)
-  - Nimble (~> 7.0.2)
-  - Quick (~> 1.2.0)
-
-SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
-    - Nimble
-    - Quick
 
 EXTERNAL SOURCES:
   AlertDisplayer:
     :path: "../"
 
 SPEC CHECKSUMS:
-  AlertDisplayer: 796997e64ac4a0a6cae8b871f445b0b57da76cd0
-  Nimble: 7f5a9c447a33002645a071bddafbfb24ea70e0ac
-  Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
+  AlertDisplayer: a96084639a6213219960a20202e39147e93400f1
 
-PODFILE CHECKSUM: 65d41ade057f36b068ea38aa5233c7e27a23f51c
+PODFILE CHECKSUM: e2b41b49bc9c5bdd6e82efe12655483f6443815d
 
 COCOAPODS: 1.7.3

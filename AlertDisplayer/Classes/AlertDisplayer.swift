@@ -26,7 +26,7 @@ extension AlertDisplayerDelegate{
     }
 }
 
-@available(iOS 9.0, *)
+@available(iOS 10.3, *)
 class AlertDisplayer: UIView{
     
     public var mainColor: UIColor = UIColor.white
@@ -156,8 +156,8 @@ class AlertDisplayer: UIView{
         self.setUpConstraints()
         
         self.addSubview(self.contentView)
-        self.bringSubviewToFront(self.contentView)
-        self.contentView.bringSubviewToFront(self.shadowView)
+        self.bringSubview(toFront: self.contentView)
+        self.contentView.bringSubview(toFront: self.shadowView)
     }
     
     func configureWith(_ delegate: AlertDisplayerDelegate){
@@ -183,7 +183,7 @@ class AlertDisplayer: UIView{
             self.constraintsToAdd.append(self.imageView.heightAnchor.constraint(equalToConstant: 50))
             
             self.shadowView.addSubview(self.imageView)
-            self.shadowView.bringSubviewToFront(self.imageView)
+            self.shadowView.bringSubview(toFront: self.imageView)
             
             self.constraintsToAdd.append(self.imageView.centerYAnchor.constraint(equalTo: self.shadowView.topAnchor, constant: 5.0))
             self.constraintsToAdd.append(self.imageView.centerXAnchor.constraint(equalTo: self.shadowView.trailingAnchor, constant: -5.0))
@@ -255,7 +255,7 @@ class AlertDisplayer: UIView{
     }
 }
 
-@available(iOS 9.0, *)
+@available(iOS 10.3, *)
 extension AlertDisplayer{
     
     private func setUpBorders(){
