@@ -37,9 +37,9 @@
 		3D317145F0CA3D74E737AB0B919AB6E9 /* QuickSpec.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F780876D2683F15D6BC2D791514E7DB /* QuickSpec.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		43BF42159F430B01CB7F94DFDA66F510 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C061463250766C9C05995AB8EE63E66 /* XCTest.framework */; };
 		475C048D21D6FAA3010FB2DEE4EE1CEB /* BeAnInstanceOf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3973D6FA5D61B94A742DE719D50B6E9A /* BeAnInstanceOf.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		49B1464622C9754B00C06A50 /* AlertDisplayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B1464522C9754B00C06A50 /* AlertDisplayer.swift */; };
-		49B1464922C9756D00C06A50 /* UIView+AddBorders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B1464722C9756C00C06A50 /* UIView+AddBorders.swift */; };
-		49B1464A22C9756D00C06A50 /* UIColor+WhiteClear.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B1464822C9756D00C06A50 /* UIColor+WhiteClear.swift */; };
+		49B1464E22C97B2D00C06A50 /* AlertDisplayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B1464B22C97B2C00C06A50 /* AlertDisplayer.swift */; };
+		49B1464F22C97B2D00C06A50 /* UIColor+WhiteClear.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B1464C22C97B2D00C06A50 /* UIColor+WhiteClear.swift */; };
+		49B1465022C97B2D00C06A50 /* UIView+AddBorders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B1464D22C97B2D00C06A50 /* UIView+AddBorders.swift */; };
 		4CBA74A9486D24DD14E8ADF7D7137A0A /* DSL.h in Headers */ = {isa = PBXBuildFile; fileRef = 5054EC8BED6A5D0AF64B3FCB59860EC1 /* DSL.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4D268D7A332174FCD34F52FE4FC2FBBA /* CwlCatchException.h in Headers */ = {isa = PBXBuildFile; fileRef = 08ADC68EFF81293A3F8D3870F6F3212B /* CwlCatchException.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		512AD763707527367E1ADDFCE87029B4 /* ThrowError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA5DEFE6C72DEB3646B03C057046743 /* ThrowError.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
@@ -199,9 +199,9 @@
 		430255499A07BFF32094AA5BAE8A5F0E /* AsyncMatcherWrapper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AsyncMatcherWrapper.swift; path = Sources/Nimble/Matchers/AsyncMatcherWrapper.swift; sourceTree = "<group>"; };
 		458F24D3629571B05D1B4D877E06BE77 /* World.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = World.h; path = Sources/QuickObjectiveC/World.h; sourceTree = "<group>"; };
 		4592B4169517644A3A4BFAD2EA5CB4D5 /* Pods-AlertDisplayer_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AlertDisplayer_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		49B1464522C9754B00C06A50 /* AlertDisplayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertDisplayer.swift; sourceTree = "<group>"; };
-		49B1464722C9756C00C06A50 /* UIView+AddBorders.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+AddBorders.swift"; sourceTree = "<group>"; };
-		49B1464822C9756D00C06A50 /* UIColor+WhiteClear.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+WhiteClear.swift"; sourceTree = "<group>"; };
+		49B1464B22C97B2C00C06A50 /* AlertDisplayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlertDisplayer.swift; path = AlertDisplayer/Classes/AlertDisplayer.swift; sourceTree = "<group>"; };
+		49B1464C22C97B2D00C06A50 /* UIColor+WhiteClear.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+WhiteClear.swift"; path = "AlertDisplayer/Classes/UIColor+WhiteClear.swift"; sourceTree = "<group>"; };
+		49B1464D22C97B2D00C06A50 /* UIView+AddBorders.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+AddBorders.swift"; path = "AlertDisplayer/Classes/UIView+AddBorders.swift"; sourceTree = "<group>"; };
 		4A9E830ECDC4852991DEDED51BAC5089 /* Pods-AlertDisplayer_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AlertDisplayer_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		4AF04FDC2C674B7404B0A289C8E7063D /* World+DSL.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "World+DSL.h"; path = "Sources/QuickObjectiveC/DSL/World+DSL.h"; sourceTree = "<group>"; };
 		4F70D00ED38AA530FE44775FB0BA29AC /* Nimble.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Nimble.modulemap; sourceTree = "<group>"; };
@@ -479,9 +479,9 @@
 		7A42B3061EA42F0ABB87944B7BB533AC /* AlertDisplayer */ = {
 			isa = PBXGroup;
 			children = (
-				49B1464522C9754B00C06A50 /* AlertDisplayer.swift */,
-				49B1464822C9756D00C06A50 /* UIColor+WhiteClear.swift */,
-				49B1464722C9756C00C06A50 /* UIView+AddBorders.swift */,
+				49B1464B22C97B2C00C06A50 /* AlertDisplayer.swift */,
+				49B1464C22C97B2D00C06A50 /* UIColor+WhiteClear.swift */,
+				49B1464D22C97B2D00C06A50 /* UIView+AddBorders.swift */,
 				AAB5F38901977F10D35F78D4F0A0FE89 /* Pod */,
 				1B02B815F7FE19728B23015B92629809 /* Support Files */,
 			);
@@ -884,10 +884,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49B1464922C9756D00C06A50 /* UIView+AddBorders.swift in Sources */,
-				49B1464622C9754B00C06A50 /* AlertDisplayer.swift in Sources */,
+				49B1465022C97B2D00C06A50 /* UIView+AddBorders.swift in Sources */,
+				49B1464E22C97B2D00C06A50 /* AlertDisplayer.swift in Sources */,
 				F5CC21F41E44A014B0AE80BF134D347F /* AlertDisplayer-dummy.m in Sources */,
-				49B1464A22C9756D00C06A50 /* UIColor+WhiteClear.swift in Sources */,
+				49B1464F22C97B2D00C06A50 /* UIColor+WhiteClear.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
