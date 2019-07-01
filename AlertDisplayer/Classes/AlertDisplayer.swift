@@ -257,9 +257,9 @@ public class AlertDisplayer: UIView{
 public extension AlertDisplayer{
     
     private func setUpBorders(){
-        self.topBorder = self.buttonStack.addBordersAlert(edges: .top, color: self.decorations, inset: 0.0, thickness: 1.0).first!
-        self.leftBorder = self.leftButton.addBordersAlert(edges: .right, color: self.decorations, inset: 0.0, thickness: 0.5).first!
-        self.rightBorder = self.rightButton.addBordersAlert(edges: .left, color: self.decorations, inset: 0.0, thickness: 0.5).first!
+        self.topBorder = self.buttonStack.alertViewHelper(edges: .top, color: self.decorations, inset: 0.0, thickness: 1.0).first!
+        self.leftBorder = self.leftButton.alertViewHelper(edges: .right, color: self.decorations, inset: 0.0, thickness: 0.5).first!
+        self.rightBorder = self.rightButton.alertViewHelper(edges: .left, color: self.decorations, inset: 0.0, thickness: 0.5).first!
     }
     
     private func setUpConstraints(){
@@ -303,6 +303,52 @@ public extension AlertDisplayer{
         self.constraintsToAdd.append(self.rightButton.heightAnchor.constraint(equalToConstant: 50))
         self.constraintsToAdd.append(self.buttonStack.heightAnchor.constraint(equalToConstant: 50))
         
+    }
+    
+}
+
+public extension UIView{
+    @discardableResult
+    func alertViewHelper(edges: UIRectEdge,
+                         color: UIColor,
+                         inset: CGFloat = 0.0,
+                         thickness: CGFloat = 1.0) -> [UIView] {
+        
+        var borders = [UIView]()
+        
+        @discardableResult
+        func addBorder(formats: String...) -> UIView {
+            let border = UIView(frame: .zero)
+            border.backgroundColor = color
+            border.translatesAutoresizingMaskIntoConstraints = false
+            addSubview(border)
+            addConstraints(formats.flatMap {
+                NSLayoutConstraint.constraints(withVisualFormat: $0,
+                                               options: [],
+                                               metrics: ["inset": inset, "thickness": thickness],
+                                               views: ["border": border]) })
+            borders.append(border)
+            return border
+        }
+        
+        
+        if edges.contains(.top) || edges.contains(.all) {
+            addBorder(formats: "V:|-0-[border(==thickness)]", "H:|-inset-[border]-inset-|")
+        }
+        
+        if edges.contains(.bottom) || edges.contains(.all) {
+            addBorder(formats: "V:[border(==thickness)]-0-|", "H:|-inset-[border]-inset-|")
+        }
+        
+        if edges.contains(.left) || edges.contains(.all) {
+            addBorder(formats: "V:|-inset-[border]-inset-|", "H:|-0-[border(==thickness)]")
+        }
+        
+        if edges.contains(.right) || edges.contains(.all) {
+            addBorder(formats: "V:|-inset-[border]-inset-|", "H:[border(==thickness)]-0-|")
+        }
+        
+        return borders
     }
     
 }
