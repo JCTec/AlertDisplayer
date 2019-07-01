@@ -11,6 +11,8 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 
+This library runs by itself, it was created to replace the old and not stylish UIAlertView.
+
 ## Installation
 
 AlertDisplayer is available through [CocoaPods](https://cocoapods.org). To install
@@ -18,6 +20,69 @@ it, simply add the following line to your Podfile:
 
 ```ruby
 pod 'AlertDisplayer'
+```
+
+After installing AlertDisplayer you need to configurate a ViewControllers that has clear color in background a view with top:0, bottom:0, leading:0, trailing:0 constraints relative to margins and a UIColor (light gray or black) with an alpha to create the dark (but still transparent) background. 
+Then you add the view that inherits from AlertDisplayer and reference it in the VC and configure in the viewDidLoad like this:
+
+```swift
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.view.backgroundColor = .clear
+        self.alertDisplayer.configureWith(self, 350, 250)
+
+        // Do any additional setup after loading the view.
+    }
+
+```
+
+And to configure it you also need to implement the Delegate:
+
+```swift
+extension ViewController: AlertDisplayerDelegate{
+    
+    func setUpButtons() {
+        self.alertDisplayer.setUpButtons("Aceptar")
+    }
+    
+    //Optional Method to set UIImage
+    /*func setExitImage() -> UIImage? {
+        return nil
+    }*/
+    
+    func setFont(to label: UILabel) {
+        label.font = UIFont.systemFont(ofSize: 15)
+    }
+    
+    func setBoldFont(to label: UILabel) {
+        label.font = UIFont.systemFont(ofSize: 20, weight: .bold)
+    }
+    
+    func alertDisplayerDidLoad() {
+        //Aditional Setup
+        
+        self.alertDisplayer.normalLabel.text = text
+        self.alertDisplayer.boldLabel.text = titleText
+        
+        if(self.rightText != nil){
+            self.alertDisplayer.setUpButtons(self.leftText, self.rightText)
+        }else{
+            self.alertDisplayer.setUpButtons(self.leftText)
+        }
+    }
+    
+    func didPressOk() {
+        print("didPressOkDelegate")
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    func didPressCancel() {
+        print("didPressCancelDelegate")
+        self.dismiss(animated: true, completion: nil)
+    }   
+}
 ```
 
 ## Author
