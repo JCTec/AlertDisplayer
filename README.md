@@ -22,7 +22,7 @@ it, simply add the following line to your Podfile:
 pod 'AlertDisplayer'
 ```
 
-After installing AlertDisplayer you need to configurate a ViewController that has clear color in background a view with top:0, bottom:0, leading:0, trailing:0 constraints relative to margins and a UIColor (light gray or black) with an alpha to create the dark (but still transparent) background. 
+After installing AlertDisplayer you need to configurate a ViewController that has clear color in background, a view with top:0, bottom:0, leading:0, trailing:0 constraints relative to margins and a UIColor (light gray or black) with an alpha to create the dark (but still transparent) background. 
 Then you add the view that inherits from AlertDisplayer and reference it in the VC and configure in the viewDidLoad like this:
 
 ```swift
