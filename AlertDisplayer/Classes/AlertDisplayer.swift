@@ -90,6 +90,7 @@ public class AlertDisplayer: UIView{
         self.boldLabel = UILabel()
         self.normalLabel = TopAlignedLabel()
         
+        self.layer.masksToBounds = false
         self.backgroundColor = .clear
         self.contentView.backgroundColor = .clear
         
@@ -106,8 +107,8 @@ public class AlertDisplayer: UIView{
         self.mainStack.translatesAutoresizingMaskIntoConstraints = false
         self.mainStack.layer.cornerRadius = self.cornerRadius
         
+        self.contentView.layer.masksToBounds = false
         self.contentView.translatesAutoresizingMaskIntoConstraints = false
-        self.contentView.layer.masksToBounds = true
         self.contentView.addSubview(self.mainStack)
         self.contentView.backgroundColor = self.mainColor
         self.contentView.layer.cornerRadius = self.cornerRadius
