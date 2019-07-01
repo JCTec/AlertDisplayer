@@ -76,13 +76,13 @@ public class AlertDisplayer: UIView{
     
     private var constraintsToAdd: [NSLayoutConstraint] = [NSLayoutConstraint]()
     
-    override init(frame: CGRect) {
+    override public init(frame: CGRect) {
         super.init(frame: frame)
         self.commonInit()
         
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.commonInit()
         

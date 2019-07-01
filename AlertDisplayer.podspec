@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'AlertDisplayer'
-  s.version          = '0.1.2'
+  s.version          = '0.1.3'
   s.summary          = 'AlertDisplayer is a custom UIView Written In Swift that display an alert.'
   s.swift_versions = '4.0'
 
@@ -29,7 +29,7 @@ AlertDisplayer is a custom UIView Written In Swift that display a view with 1 la
   s.source           = { :git => 'https://github.com/JCTec/AlertDisplayer.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/EstevezrJc'
 
-  s.ios.deployment_target = '10.3'
+  s.ios.deployment_target = '11.0'
 
   s.source_files = 'AlertDisplayer/Classes/**/*'
   
