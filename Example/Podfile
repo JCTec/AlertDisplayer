@@ -1,5 +1,7 @@
 use_frameworks!
 
+platform :ios, '11.0'
+
 target 'AlertDisplayer_Example' do
   pod 'AlertDisplayer', :path => '../'
 end

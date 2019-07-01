@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-protocol AlertDisplayerDelegate: class {
+public protocol AlertDisplayerDelegate: class {
     func setExitImage() -> UIImage?
     func setUpButtons()
     
@@ -20,13 +20,13 @@ protocol AlertDisplayerDelegate: class {
     func didPressCancel()
 }
 
-extension AlertDisplayerDelegate{
+public extension AlertDisplayerDelegate{
     func setExitImage() -> UIImage?{
         return nil
     }
 }
 
-class AlertDisplayer: UIView{
+public class AlertDisplayer: UIView{
     
     public var mainColor: UIColor = UIColor.white
     
@@ -159,7 +159,7 @@ class AlertDisplayer: UIView{
         self.contentView.bringSubview(toFront: self.shadowView)
     }
     
-    func configureWith(_ delegate: AlertDisplayerDelegate){
+    public func configureWith(_ delegate: AlertDisplayerDelegate){
         self.delegate = delegate
         self.delegate?.setUpButtons()
         self.delegate?.setBoldFont(to: self.boldLabel)
@@ -191,17 +191,17 @@ class AlertDisplayer: UIView{
         NSLayoutConstraint.activate(self.constraintsToAdd)
     }
     
-    @objc func didSelectLeft(){
+    @objc private func didSelectLeft(){
         print("didPressCancel")
         delegate?.didPressCancel()
     }
     
-    @objc func didSelectRight(){
+    @objc private func didSelectRight(){
         print("didPressOk")
         delegate?.didPressOk()
     }
     
-    func setUpButtons(_ first: String!, _ second: String? = nil){
+    public func setUpButtons(_ first: String!, _ second: String? = nil){
         
         if(second == nil){
             self.leftButton.isHidden = true
@@ -254,7 +254,7 @@ class AlertDisplayer: UIView{
     }
 }
 
-extension AlertDisplayer{
+public extension AlertDisplayer{
     
     private func setUpBorders(){
         self.topBorder = self.buttonStack.addBordersAlert(edges: .top, color: self.decorations, inset: 0.0, thickness: 1.0).first!

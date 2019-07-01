@@ -29,8 +29,11 @@
                                     <constraint firstAttribute="height" constant="150" id="fNF-zG-2Sx"/>
                                 </constraints>
                                 <state key="normal" title="AlertDisplayer!">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="25.0"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="fD5-pA-vQf" kind="presentation" modalPresentationStyle="overFullScreen" modalTransitionStyle="crossDissolve" id="Qos-VR-Wve"/>
                                 </connections>

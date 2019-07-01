@@ -7,7 +7,7 @@
 //
 
 import UIKit
-//import AlertDisplayer
+import AlertDisplayer
 
 class ViewController: UIViewController {
     
