@@ -7,16 +7,15 @@
 //
 
 import UIKit
-import AlertDisplayer
 
 class ViewController: UIViewController {
     
     @IBOutlet weak var alertDisplayer: AlertDisplayer!
     
-    var text: String!
-    var titleText: String!
-    var leftText: String!
-    var rightText: String?
+    var text: String! = "This is the normal label"
+    var titleText: String! = "This is the title label"
+    var leftText: String! = "No"
+    var rightText: String? = "Yes"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +23,7 @@ class ViewController: UIViewController {
         self.view.backgroundColor = .clear
         self.alertDisplayer.configureWith(self)
         
-        self.view.bringSubviewToFront(self.alertDisplayer)
+        self.view.bringSubview(toFront: self.alertDisplayer)
         // Do any additional setup after loading the view.
     }
     

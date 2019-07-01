@@ -12,7 +12,6 @@
 		38FF1B13A324DE60751A83B0CC2A2B4E /* AlertDisplayer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EDF411E81C647E53454E11DC0717EC6 /* AlertDisplayer-dummy.m */; };
 		5E8997BCDF3B3975E6D0515AB51231B9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		61CEE971D82036DE72992FAAAD03AE15 /* AlertDisplayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21656B7B99FCA9F560F902ADC6288115 /* AlertDisplayer.swift */; };
-		8E5F26BFA227F16E3407E2ACCA8D1CC2 /* UIColor+WhiteClear.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3E3D7DFC055937446E82F5CD712777 /* UIColor+WhiteClear.swift */; };
 		9D5D76169DA84B45BF73AE0051D71B00 /* AlertDisplayer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FE08B7A23C159D4EA2B7B6DEB492155D /* AlertDisplayer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A1364471C0C941F66D5E13D42FC4A0E2 /* UIView+AddBorders.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F8EDCDA43A67DC9545E7B8932CF8F9 /* UIView+AddBorders.swift */; };
 		E292CDF906ED5269B16C919632E36096 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
@@ -36,22 +35,21 @@
 		3D51F8E23267B6C57F7FA71B3AC7A18A /* Pods-AlertDisplayer_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AlertDisplayer_Example.release.xcconfig"; sourceTree = "<group>"; };
 		4593BDC9D7051BD1D5EB6D1159F594FC /* AlertDisplayer-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "AlertDisplayer-Info.plist"; sourceTree = "<group>"; };
 		5177F56AC6DB3523EDDB1A73EF0823B1 /* Pods-AlertDisplayer_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AlertDisplayer_Example-Info.plist"; sourceTree = "<group>"; };
-		542950D11650E92794F9C5D0E38A2570 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		542950D11650E92794F9C5D0E38A2570 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		5EF49BA253A377469D4211A0A8433958 /* AlertDisplayer-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AlertDisplayer-prefix.pch"; sourceTree = "<group>"; };
 		78C6607CF840E0B44F9328E4583716A4 /* Pods-AlertDisplayer_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AlertDisplayer_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		7A6EDA58541FCAB4F9ABE8860FD3566B /* AlertDisplayer.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = AlertDisplayer.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		7B3E3D7DFC055937446E82F5CD712777 /* UIColor+WhiteClear.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+WhiteClear.swift"; path = "AlertDisplayer/Classes/UIColor+WhiteClear.swift"; sourceTree = "<group>"; };
+		7A6EDA58541FCAB4F9ABE8860FD3566B /* AlertDisplayer.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = AlertDisplayer.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		92E921947296C7B5ABB1562C189F1C56 /* Pods-AlertDisplayer_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AlertDisplayer_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		9A61EC8A550D5B1EE00DEF264225F04C /* AlertDisplayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AlertDisplayer.framework; path = AlertDisplayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		B1263C6759851C6354CE72D6809672CB /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		9A61EC8A550D5B1EE00DEF264225F04C /* AlertDisplayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AlertDisplayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B1263C6759851C6354CE72D6809672CB /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B214E5DD641D8325FB79CFF608729922 /* AlertDisplayer.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AlertDisplayer.xcconfig; sourceTree = "<group>"; };
 		C2CBE5896FFEE2BFE1296220FACE000D /* AlertDisplayer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AlertDisplayer.modulemap; sourceTree = "<group>"; };
 		C3D7DB094DFC52FDC4A68355D32F4EC1 /* Pods-AlertDisplayer_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AlertDisplayer_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		D1FC79F1FD2C5EBD0F6927875F92AA64 /* Pods-AlertDisplayer_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AlertDisplayer_Example-frameworks.sh"; sourceTree = "<group>"; };
 		D4C74469F3DE80BC2D9FF531BE804EDB /* Pods-AlertDisplayer_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AlertDisplayer_Example-dummy.m"; sourceTree = "<group>"; };
 		D94E40B99E2C38708E3986D7FA0D74EE /* Pods-AlertDisplayer_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AlertDisplayer_Example-umbrella.h"; sourceTree = "<group>"; };
-		E155489445B593BC6AA39A102DE9FEB8 /* Pods_AlertDisplayer_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_AlertDisplayer_Example.framework; path = "Pods-AlertDisplayer_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E155489445B593BC6AA39A102DE9FEB8 /* Pods_AlertDisplayer_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlertDisplayer_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1F8EDCDA43A67DC9545E7B8932CF8F9 /* UIView+AddBorders.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+AddBorders.swift"; path = "AlertDisplayer/Classes/UIView+AddBorders.swift"; sourceTree = "<group>"; };
 		FE08B7A23C159D4EA2B7B6DEB492155D /* AlertDisplayer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AlertDisplayer-umbrella.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -165,7 +163,6 @@
 			isa = PBXGroup;
 			children = (
 				21656B7B99FCA9F560F902ADC6288115 /* AlertDisplayer.swift */,
-				7B3E3D7DFC055937446E82F5CD712777 /* UIColor+WhiteClear.swift */,
 				E1F8EDCDA43A67DC9545E7B8932CF8F9 /* UIView+AddBorders.swift */,
 				C7FF7AC6B90A0E904840275EF0445EC6 /* Pod */,
 				C2CC0953681C95AE4BCADB6B672750EB /* Support Files */,
@@ -292,7 +289,6 @@
 			files = (
 				38FF1B13A324DE60751A83B0CC2A2B4E /* AlertDisplayer-dummy.m in Sources */,
 				61CEE971D82036DE72992FAAAD03AE15 /* AlertDisplayer.swift in Sources */,
-				8E5F26BFA227F16E3407E2ACCA8D1CC2 /* UIColor+WhiteClear.swift in Sources */,
 				A1364471C0C941F66D5E13D42FC4A0E2 /* UIView+AddBorders.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -406,8 +402,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
