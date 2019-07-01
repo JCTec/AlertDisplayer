@@ -1,5 +1,5 @@
 PODS:
-  - AlertDisplayer (0.1.0)
+  - AlertDisplayer (0.1.5)
 
 DEPENDENCIES:
   - AlertDisplayer (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  AlertDisplayer: b4f176477a47e178202863e7d88f0b360c623cc0
+  AlertDisplayer: cf47e6a07ba039baf28def71c9f577a70e95c843
 
 PODFILE CHECKSUM: e3e61039c527143e48045eea50031aedfd89f8f8
 

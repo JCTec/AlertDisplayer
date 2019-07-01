@@ -32,19 +32,17 @@ public class AlertDisplayer: UIView{
     
     public var decorations: UIColor = UIColor(red:0.24, green:0.84, blue:0.44, alpha:1)
     
-    public var exitImage: UIImage?
-    
     public var width: CGFloat = 350.0
     
-    public var height: CGFloat = 210.0
+    public var height: CGFloat = 200.0
+    
+    public var exitImage: UIImage?
     
     public var buttonHeight: CGFloat = 60.0
     
     public var cornerRadius: CGFloat = 25.0
     
     public var contentView: UIView!
-    public var alertView: UIView!
-    public var shadowView: UIView!
     public var buttonStack: UIStackView!
     public var mainStack: UIStackView!
     public var topView: UIView!
@@ -62,14 +60,12 @@ public class AlertDisplayer: UIView{
     }()
     
     public var boldLabel: UILabel!
-    public var normalLabel: UILabel!
+    public var normalLabel: TopAlignedLabel!
     public var normalLabelForUserInterface: UILabel!
     public var imageView: UIImageView!
     
     weak var delegate: AlertDisplayerDelegate!
     
-    private var heightConstraint: NSLayoutConstraint!
-    private var widthConstraint: NSLayoutConstraint!
     private var topBorder: UIView!
     private var leftBorder: UIView!
     private var rightBorder: UIView!
@@ -90,11 +86,9 @@ public class AlertDisplayer: UIView{
     
     private func commonInit(){
         self.contentView = UIView()
-        self.alertView = UIView()
-        self.shadowView = UIView()
         self.topView = UIView()
         self.boldLabel = UILabel()
-        self.normalLabel = UILabel()
+        self.normalLabel = TopAlignedLabel()
         
         self.backgroundColor = .clear
         self.contentView.backgroundColor = .clear
@@ -112,20 +106,12 @@ public class AlertDisplayer: UIView{
         self.mainStack.translatesAutoresizingMaskIntoConstraints = false
         self.mainStack.layer.cornerRadius = self.cornerRadius
         
-        self.shadowView.translatesAutoresizingMaskIntoConstraints = false
-        self.shadowView.backgroundColor = UIColor.white.withAlphaComponent(0.0)
-        self.shadowView.addSubview(self.alertView)
-        
         self.contentView.translatesAutoresizingMaskIntoConstraints = false
-        self.contentView.addSubview(self.shadowView)
-        
-        self.widthConstraint = self.shadowView.widthAnchor.constraint(equalToConstant: self.width)
-        self.heightConstraint = self.shadowView.heightAnchor.constraint(equalToConstant: self.height)
-        
-        self.alertView.backgroundColor = self.mainColor
-        self.alertView.layer.cornerRadius = self.cornerRadius
-        self.alertView.translatesAutoresizingMaskIntoConstraints = false
-        self.alertView.addSubview(self.mainStack)
+        self.contentView.layer.masksToBounds = true
+        self.contentView.addSubview(self.mainStack)
+        self.contentView.backgroundColor = self.mainColor
+        self.contentView.layer.cornerRadius = self.cornerRadius
+        self.contentView.addSubview(self.mainStack)
         
         self.topView.backgroundColor = UIColor.white.withAlphaComponent(0.0)
         self.topView.translatesAutoresizingMaskIntoConstraints = false
@@ -156,10 +142,10 @@ public class AlertDisplayer: UIView{
         
         self.addSubview(self.contentView)
         self.bringSubview(toFront: self.contentView)
-        self.contentView.bringSubview(toFront: self.shadowView)
+        self.contentView.bringSubview(toFront: self.mainStack)
     }
     
-    public func configureWith(_ delegate: AlertDisplayerDelegate){
+    public func configureWith(_ delegate: AlertDisplayerDelegate, _ width: CGFloat? = nil,_ height: CGFloat? = nil){
         self.delegate = delegate
         self.delegate?.setUpButtons()
         self.delegate?.setBoldFont(to: self.boldLabel)
@@ -181,11 +167,21 @@ public class AlertDisplayer: UIView{
             self.constraintsToAdd.append(self.imageView.widthAnchor.constraint(equalToConstant: 50))
             self.constraintsToAdd.append(self.imageView.heightAnchor.constraint(equalToConstant: 50))
             
-            self.shadowView.addSubview(self.imageView)
-            self.shadowView.bringSubview(toFront: self.imageView)
+            self.contentView.addSubview(self.imageView)
+            self.contentView.bringSubview(toFront: self.imageView)
             
-            self.constraintsToAdd.append(self.imageView.centerYAnchor.constraint(equalTo: self.shadowView.topAnchor, constant: 5.0))
-            self.constraintsToAdd.append(self.imageView.centerXAnchor.constraint(equalTo: self.shadowView.trailingAnchor, constant: -5.0))
+            self.constraintsToAdd.append(self.imageView.centerYAnchor.constraint(equalTo: self.contentView.topAnchor, constant: 5.0))
+            self.constraintsToAdd.append(self.imageView.centerXAnchor.constraint(equalTo: self.contentView.trailingAnchor, constant: -5.0))
+        }
+        
+        if(width != nil){
+            self.width = width ?? 300
+            self.constraintsToAdd.append(self.widthAnchor.constraint(equalToConstant: self.width))
+        }
+        
+        if(height != nil){
+            self.width = height ?? 250
+            self.constraintsToAdd.append(self.heightAnchor.constraint(equalToConstant: self.height))
         }
         
         NSLayoutConstraint.activate(self.constraintsToAdd)
@@ -256,6 +252,10 @@ public class AlertDisplayer: UIView{
 
 public extension AlertDisplayer{
     
+    override func prepareForInterfaceBuilder() {
+        self.commonInit()
+    }
+    
     private func setUpBorders(){
         self.topBorder = self.buttonStack.alertViewHelper(edges: .top, color: self.decorations, inset: 0.0, thickness: 1.0).first!
         self.leftBorder = self.leftButton.alertViewHelper(edges: .right, color: self.decorations, inset: 0.0, thickness: 0.5).first!
@@ -263,30 +263,17 @@ public extension AlertDisplayer{
     }
     
     private func setUpConstraints(){
+        
         self.constraintsToAdd.append(self.contentView.topAnchor.constraint(equalTo: self.topAnchor, constant: 0.0))
         self.constraintsToAdd.append(self.contentView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 0.0))
         self.constraintsToAdd.append(self.contentView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0.0))
         self.constraintsToAdd.append(self.contentView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0.0))
         
-        self.constraintsToAdd.append(self.shadowView.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: 0.0))
-        self.constraintsToAdd.append(self.shadowView.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: 0.0))
+        self.constraintsToAdd.append(self.mainStack.topAnchor.constraint(equalTo: self.contentView.topAnchor, constant: 0.0))
+        self.constraintsToAdd.append(self.mainStack.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor, constant: 0.0))
+        self.constraintsToAdd.append(self.mainStack.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor, constant: 0.0))
+        self.constraintsToAdd.append(self.mainStack.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor, constant: 0.0))
         
-        self.constraintsToAdd.append(self.widthConstraint)
-        self.constraintsToAdd.append(self.heightConstraint)
-        
-        self.constraintsToAdd.append(self.alertView.topAnchor.constraint(equalTo: self.shadowView.topAnchor, constant: 0.0))
-        self.constraintsToAdd.append(self.alertView.bottomAnchor.constraint(equalTo: self.shadowView.bottomAnchor, constant: 0.0))
-        self.constraintsToAdd.append(self.alertView.leadingAnchor.constraint(equalTo: self.shadowView.leadingAnchor, constant: 0.0))
-        self.constraintsToAdd.append(self.alertView.trailingAnchor.constraint(equalTo: self.shadowView.trailingAnchor, constant: 0.0))
-        
-        self.constraintsToAdd.append(self.mainStack.topAnchor.constraint(equalTo: self.alertView.topAnchor, constant: 0.0))
-        self.constraintsToAdd.append(self.mainStack.bottomAnchor.constraint(equalTo: self.alertView.bottomAnchor, constant: 0.0))
-        self.constraintsToAdd.append(self.mainStack.leadingAnchor.constraint(equalTo: self.alertView.leadingAnchor, constant: 0.0))
-        self.constraintsToAdd.append(self.mainStack.trailingAnchor.constraint(equalTo: self.alertView.trailingAnchor, constant: 0.0))
-        
-        self.constraintsToAdd.append(self.topView.widthAnchor.constraint(equalTo: self.mainStack.widthAnchor, multiplier: 1.0))
-        
-        self.constraintsToAdd.append(self.buttonStack.heightAnchor.constraint(equalToConstant: 100))
         
         self.constraintsToAdd.append(self.boldLabel.bottomAnchor.constraint(equalTo: self.normalLabel.topAnchor, constant: 5.0))
         self.constraintsToAdd.append(self.boldLabel.leadingAnchor.constraint(equalTo: self.topView.leadingAnchor, constant: 10.0))
@@ -298,11 +285,12 @@ public extension AlertDisplayer{
         self.constraintsToAdd.append(self.normalLabel.leadingAnchor.constraint(equalTo: self.topView.leadingAnchor, constant: 10.0))
         self.constraintsToAdd.append(self.normalLabel.trailingAnchor.constraint(equalTo: self.topView.trailingAnchor, constant: -10.0))
         
+        self.constraintsToAdd.append(self.leftButton.heightAnchor.constraint(equalToConstant: self.buttonHeight))
+        self.constraintsToAdd.append(self.rightButton.heightAnchor.constraint(equalToConstant: self.buttonHeight))
+        self.constraintsToAdd.append(self.buttonStack.heightAnchor.constraint(equalToConstant: self.buttonHeight))
         
-        self.constraintsToAdd.append(self.leftButton.heightAnchor.constraint(equalToConstant: 50))
-        self.constraintsToAdd.append(self.rightButton.heightAnchor.constraint(equalToConstant: 50))
-        self.constraintsToAdd.append(self.buttonStack.heightAnchor.constraint(equalToConstant: 50))
-        
+        self.constraintsToAdd.append(self.topView.heightAnchor.constraint(equalToConstant: self.contentView.frame.height - self.buttonHeight))
+
     }
     
 }
@@ -351,4 +339,19 @@ public extension UIView{
         return borders
     }
     
+}
+
+public class TopAlignedLabel: UILabel {
+    override public func drawText(in rect: CGRect) {
+        if let stringText = text {
+            let stringTextAsNSString = stringText as NSString
+            let labelStringSize = stringTextAsNSString.boundingRect(with: CGSize(width: self.frame.width,height: CGFloat.greatestFiniteMagnitude),
+                                                                    options: NSStringDrawingOptions.usesLineFragmentOrigin,
+                                                                    attributes: [NSAttributedString.Key.font: font ?? UIFont.systemFont(ofSize: 14)],
+                                                                    context: nil).size
+            super.drawText(in: CGRect(x:0,y: 0,width: self.frame.width, height:ceil(labelStringSize.height)))
+        } else {
+            super.drawText(in: rect)
+        }
+    }
 }

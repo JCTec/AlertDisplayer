@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		06F3CF0D17495790A94D592BF913CD0F /* Pods-AlertDisplayer_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C74469F3DE80BC2D9FF531BE804EDB /* Pods-AlertDisplayer_Example-dummy.m */; };
+		2BED323F4D5CAD24084FFD57006F2B03 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		2C52E58B9B93C03D549911541DC06362 /* Pods-AlertDisplayer_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D94E40B99E2C38708E3986D7FA0D74EE /* Pods-AlertDisplayer_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		54FD6514866A5C143BD1C233ECC0A89F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		8ED88EFE383BCDBF1863F749008E664F /* AlertDisplayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC1E9B1E5BB32C3D2D93ED5E8535EFD /* AlertDisplayer.swift */; };
-		B320426DEA4C5E62CE5D8767AB09C289 /* AlertDisplayer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C1B197FA010B64A302E28AF1A7C5ACC5 /* AlertDisplayer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C491DFB81780613AAFE7422E55F02DB3 /* AlertDisplayer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 492D00531A62F508E33F4B4FEA01F8C7 /* AlertDisplayer-dummy.m */; };
+		6978B9FD23333924A945B945CE9A25C1 /* AlertDisplayer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 27766E7A977A4522F8D3B1C477CF407E /* AlertDisplayer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		71A9691F5C58D9B466B405FC98F804AF /* AlertDisplayer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E22A1927C12F6AE5A322DCF3D925F123 /* AlertDisplayer-dummy.m */; };
+		D8DFD9904444C782062E8D06D7DAB133 /* AlertDisplayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9726DF026D0F7E70315FD860059165 /* AlertDisplayer.swift */; };
 		E292CDF906ED5269B16C919632E36096 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,45 +27,45 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		200ADECA29BDE61F237E16EEEA47C6FE /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		03B6E38403A5192F4302A9C0E3C8E8E2 /* AlertDisplayer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AlertDisplayer.modulemap; sourceTree = "<group>"; };
 		209FF197AE2AEC35F7F95C4E83EC17FF /* Pods-AlertDisplayer_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AlertDisplayer_Example.modulemap"; sourceTree = "<group>"; };
+		27766E7A977A4522F8D3B1C477CF407E /* AlertDisplayer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AlertDisplayer-umbrella.h"; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		3D51F8E23267B6C57F7FA71B3AC7A18A /* Pods-AlertDisplayer_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AlertDisplayer_Example.release.xcconfig"; sourceTree = "<group>"; };
-		492D00531A62F508E33F4B4FEA01F8C7 /* AlertDisplayer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AlertDisplayer-dummy.m"; sourceTree = "<group>"; };
 		5177F56AC6DB3523EDDB1A73EF0823B1 /* Pods-AlertDisplayer_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AlertDisplayer_Example-Info.plist"; sourceTree = "<group>"; };
-		5CC1E9B1E5BB32C3D2D93ED5E8535EFD /* AlertDisplayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AlertDisplayer.swift; path = AlertDisplayer/Classes/AlertDisplayer.swift; sourceTree = "<group>"; };
 		78C6607CF840E0B44F9328E4583716A4 /* Pods-AlertDisplayer_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AlertDisplayer_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		821CC9BF59E8371FAFB546950B718D08 /* AlertDisplayer-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "AlertDisplayer-Info.plist"; sourceTree = "<group>"; };
+		8D9726DF026D0F7E70315FD860059165 /* AlertDisplayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AlertDisplayer.swift; path = AlertDisplayer/Classes/AlertDisplayer.swift; sourceTree = "<group>"; };
+		928DF8FD21C149530FEC6BF619E6D397 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		92E921947296C7B5ABB1562C189F1C56 /* Pods-AlertDisplayer_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AlertDisplayer_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		9A61EC8A550D5B1EE00DEF264225F04C /* AlertDisplayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AlertDisplayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		C1B197FA010B64A302E28AF1A7C5ACC5 /* AlertDisplayer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AlertDisplayer-umbrella.h"; sourceTree = "<group>"; };
-		C1CF6561E7ED739DBEE194D80AA740FC /* AlertDisplayer-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AlertDisplayer-prefix.pch"; sourceTree = "<group>"; };
+		97BEDF94836AB29E065AA135BAD7B8A6 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		9A61EC8A550D5B1EE00DEF264225F04C /* AlertDisplayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AlertDisplayer.framework; path = AlertDisplayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B8B16B31832DDFA03CC0DFD90C1F0BF0 /* AlertDisplayer.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = AlertDisplayer.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		C21D7E3268193F87659E98379F94035C /* AlertDisplayer.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AlertDisplayer.xcconfig; sourceTree = "<group>"; };
 		C3D7DB094DFC52FDC4A68355D32F4EC1 /* Pods-AlertDisplayer_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AlertDisplayer_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		C5CC3F6BB1FD1A9FE590BF5FEFB0A47A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		CC9A9D7A1359C4F46E106AEC0D2D47F0 /* AlertDisplayer.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = AlertDisplayer.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		CEDC4001DE4B67FBB52B148A5499B5E7 /* AlertDisplayer-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AlertDisplayer-prefix.pch"; sourceTree = "<group>"; };
 		D1FC79F1FD2C5EBD0F6927875F92AA64 /* Pods-AlertDisplayer_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AlertDisplayer_Example-frameworks.sh"; sourceTree = "<group>"; };
 		D4C74469F3DE80BC2D9FF531BE804EDB /* Pods-AlertDisplayer_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AlertDisplayer_Example-dummy.m"; sourceTree = "<group>"; };
 		D94E40B99E2C38708E3986D7FA0D74EE /* Pods-AlertDisplayer_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AlertDisplayer_Example-umbrella.h"; sourceTree = "<group>"; };
-		E155489445B593BC6AA39A102DE9FEB8 /* Pods_AlertDisplayer_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlertDisplayer_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E59D7BA5B655BD519FF0853696890178 /* AlertDisplayer-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "AlertDisplayer-Info.plist"; sourceTree = "<group>"; };
-		E6416C9AA1B2BDB983BD086AA5E2832F /* AlertDisplayer.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AlertDisplayer.xcconfig; sourceTree = "<group>"; };
-		EFE08FA19388AD89032EEDE4A69D054A /* AlertDisplayer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AlertDisplayer.modulemap; sourceTree = "<group>"; };
+		E155489445B593BC6AA39A102DE9FEB8 /* Pods_AlertDisplayer_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_AlertDisplayer_Example.framework; path = "Pods-AlertDisplayer_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E22A1927C12F6AE5A322DCF3D925F123 /* AlertDisplayer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AlertDisplayer-dummy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1EBEA0C359EE8F9F9D24659E400DF752 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BED323F4D5CAD24084FFD57006F2B03 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6AE56B4E7A3F9CFBA3570F0525E73B3C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				E292CDF906ED5269B16C919632E36096 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		98BE7F555267BB0C590AE58B80DEAB3B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				54FD6514866A5C143BD1C233ECC0A89F /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +79,16 @@
 				E155489445B593BC6AA39A102DE9FEB8 /* Pods_AlertDisplayer_Example.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		0C6C25DE6479D38AF0014747EDF8ABC2 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				B8B16B31832DDFA03CC0DFD90C1F0BF0 /* AlertDisplayer.podspec */,
+				97BEDF94836AB29E065AA135BAD7B8A6 /* LICENSE */,
+				928DF8FD21C149530FEC6BF619E6D397 /* README.md */,
+			);
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		0CE35579150A72E23B84FB27C1461EE2 /* Pods-AlertDisplayer_Example */ = {
@@ -98,25 +108,18 @@
 			path = "Target Support Files/Pods-AlertDisplayer_Example";
 			sourceTree = "<group>";
 		};
-		252D8FEB39D13D7CBE221373ED20D284 /* Pod */ = {
+		33F818D06022D7E52966D032E08EF94B /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				CC9A9D7A1359C4F46E106AEC0D2D47F0 /* AlertDisplayer.podspec */,
-				C5CC3F6BB1FD1A9FE590BF5FEFB0A47A /* LICENSE */,
-				200ADECA29BDE61F237E16EEEA47C6FE /* README.md */,
+				03B6E38403A5192F4302A9C0E3C8E8E2 /* AlertDisplayer.modulemap */,
+				C21D7E3268193F87659E98379F94035C /* AlertDisplayer.xcconfig */,
+				E22A1927C12F6AE5A322DCF3D925F123 /* AlertDisplayer-dummy.m */,
+				821CC9BF59E8371FAFB546950B718D08 /* AlertDisplayer-Info.plist */,
+				CEDC4001DE4B67FBB52B148A5499B5E7 /* AlertDisplayer-prefix.pch */,
+				27766E7A977A4522F8D3B1C477CF407E /* AlertDisplayer-umbrella.h */,
 			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
-		38E277E63E046692918C4DAF4FCA0ABC /* AlertDisplayer */ = {
-			isa = PBXGroup;
-			children = (
-				5CC1E9B1E5BB32C3D2D93ED5E8535EFD /* AlertDisplayer.swift */,
-				252D8FEB39D13D7CBE221373ED20D284 /* Pod */,
-				C62F5196AEC9436F050443404FFB8B95 /* Support Files */,
-			);
-			name = AlertDisplayer;
-			path = ../..;
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/AlertDisplayer";
 			sourceTree = "<group>";
 		};
 		696F2186EA318802CA0841A86EAD0B01 /* Targets Support Files */ = {
@@ -127,14 +130,6 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		ACF342518E486AFBEAB5D337CDA83938 /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				38E277E63E046692918C4DAF4FCA0ABC /* AlertDisplayer */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
 		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -143,29 +138,23 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		C62F5196AEC9436F050443404FFB8B95 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				EFE08FA19388AD89032EEDE4A69D054A /* AlertDisplayer.modulemap */,
-				E6416C9AA1B2BDB983BD086AA5E2832F /* AlertDisplayer.xcconfig */,
-				492D00531A62F508E33F4B4FEA01F8C7 /* AlertDisplayer-dummy.m */,
-				E59D7BA5B655BD519FF0853696890178 /* AlertDisplayer-Info.plist */,
-				C1CF6561E7ED739DBEE194D80AA740FC /* AlertDisplayer-prefix.pch */,
-				C1B197FA010B64A302E28AF1A7C5ACC5 /* AlertDisplayer-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/AlertDisplayer";
-			sourceTree = "<group>";
-		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				ACF342518E486AFBEAB5D337CDA83938 /* Development Pods */,
+				D07BFF3C8D00E607350E5F5A12CBF1DD /* Development Pods */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
 				0A2E6A41E9CCFE86BFBF23EF5EF91AA1 /* Products */,
 				696F2186EA318802CA0841A86EAD0B01 /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		D07BFF3C8D00E607350E5F5A12CBF1DD /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FB41D25E36160199F9A89A27ECC0A4AF /* AlertDisplayer */,
+			);
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
@@ -174,6 +163,17 @@
 				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FB41D25E36160199F9A89A27ECC0A4AF /* AlertDisplayer */ = {
+			isa = PBXGroup;
+			children = (
+				8D9726DF026D0F7E70315FD860059165 /* AlertDisplayer.swift */,
+				0C6C25DE6479D38AF0014747EDF8ABC2 /* Pod */,
+				33F818D06022D7E52966D032E08EF94B /* Support Files */,
+			);
+			name = AlertDisplayer;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,11 +187,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CD65B9A316BB24A962BFF1A10F532CAD /* Headers */ = {
+		DDDCFA63C463D451BAFC52190AA6805F /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B320426DEA4C5E62CE5D8767AB09C289 /* AlertDisplayer-umbrella.h in Headers */,
+				6978B9FD23333924A945B945CE9A25C1 /* AlertDisplayer-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,12 +200,12 @@
 /* Begin PBXNativeTarget section */
 		5ECEF7787B553EAED1374A7DE4C08DE8 /* AlertDisplayer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 031A165B86E2C028214F2757B65947FE /* Build configuration list for PBXNativeTarget "AlertDisplayer" */;
+			buildConfigurationList = 8E2D395B2AD153152D0A0034E29912CC /* Build configuration list for PBXNativeTarget "AlertDisplayer" */;
 			buildPhases = (
-				CD65B9A316BB24A962BFF1A10F532CAD /* Headers */,
-				1E510A762F04807B23177A138CF804B6 /* Sources */,
-				98BE7F555267BB0C590AE58B80DEAB3B /* Frameworks */,
-				2C575F6306F4BB8E15BEDA510B3181CF /* Resources */,
+				DDDCFA63C463D451BAFC52190AA6805F /* Headers */,
+				8CE7B8D63D49F9F0108D59C2EE1E0825 /* Sources */,
+				1EBEA0C359EE8F9F9D24659E400DF752 /* Frameworks */,
+				5784719AD2BC0B057D24A71F69268283 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -270,7 +270,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2C575F6306F4BB8E15BEDA510B3181CF /* Resources */ = {
+		5784719AD2BC0B057D24A71F69268283 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -280,12 +280,12 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1E510A762F04807B23177A138CF804B6 /* Sources */ = {
+		8CE7B8D63D49F9F0108D59C2EE1E0825 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C491DFB81780613AAFE7422E55F02DB3 /* AlertDisplayer-dummy.m in Sources */,
-				8ED88EFE383BCDBF1863F749008E664F /* AlertDisplayer.swift in Sources */,
+				71A9691F5C58D9B466B405FC98F804AF /* AlertDisplayer-dummy.m in Sources */,
+				D8DFD9904444C782062E8D06D7DAB133 /* AlertDisplayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,43 +398,10 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Release;
-		};
-		3253F24C5363074444D657750D150323 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E6416C9AA1B2BDB983BD086AA5E2832F /* AlertDisplayer.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/AlertDisplayer/AlertDisplayer-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/AlertDisplayer/AlertDisplayer-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/AlertDisplayer/AlertDisplayer.modulemap";
-				PRODUCT_MODULE_NAME = AlertDisplayer;
-				PRODUCT_NAME = AlertDisplayer;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -472,6 +439,73 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		A1B0AEEF7CD2D3FFB414A435AB393CBD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C21D7E3268193F87659E98379F94035C /* AlertDisplayer.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/AlertDisplayer/AlertDisplayer-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AlertDisplayer/AlertDisplayer-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/AlertDisplayer/AlertDisplayer.modulemap";
+				PRODUCT_MODULE_NAME = AlertDisplayer;
+				PRODUCT_NAME = AlertDisplayer;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		BCCC8B4DEE4EE895ECE8A2D93E031F13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C21D7E3268193F87659E98379F94035C /* AlertDisplayer.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/AlertDisplayer/AlertDisplayer-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AlertDisplayer/AlertDisplayer-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/AlertDisplayer/AlertDisplayer.modulemap";
+				PRODUCT_MODULE_NAME = AlertDisplayer;
+				PRODUCT_NAME = AlertDisplayer;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		DD8F832993327D1DD8046C3CBCBD97CD /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -537,51 +571,9 @@
 			};
 			name = Debug;
 		};
-		E1DD7DC44744B88CC1AFC793259C9A18 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E6416C9AA1B2BDB983BD086AA5E2832F /* AlertDisplayer.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/AlertDisplayer/AlertDisplayer-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/AlertDisplayer/AlertDisplayer-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/AlertDisplayer/AlertDisplayer.modulemap";
-				PRODUCT_MODULE_NAME = AlertDisplayer;
-				PRODUCT_NAME = AlertDisplayer;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		031A165B86E2C028214F2757B65947FE /* Build configuration list for PBXNativeTarget "AlertDisplayer" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E1DD7DC44744B88CC1AFC793259C9A18 /* Debug */,
-				3253F24C5363074444D657750D150323 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		11AB467F4FD4EE47F036A5587C7F9C2C /* Build configuration list for PBXNativeTarget "Pods-AlertDisplayer_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -596,6 +588,15 @@
 			buildConfigurations = (
 				DD8F832993327D1DD8046C3CBCBD97CD /* Debug */,
 				257497152829C177993B5EC99C1D227A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8E2D395B2AD153152D0A0034E29912CC /* Build configuration list for PBXNativeTarget "AlertDisplayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1B0AEEF7CD2D3FFB414A435AB393CBD /* Debug */,
+				BCCC8B4DEE4EE895ECE8A2D93E031F13 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

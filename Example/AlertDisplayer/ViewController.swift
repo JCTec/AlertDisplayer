@@ -22,7 +22,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         self.view.backgroundColor = .clear
-        self.alertDisplayer.configureWith(self)
+        self.alertDisplayer.configureWith(self, 350, 250)
         
         self.view.bringSubview(toFront: self.alertDisplayer)
         // Do any additional setup after loading the view.
