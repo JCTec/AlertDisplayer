@@ -66,9 +66,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		499B4D1622CA704000ABF57C /* AlertDisplayer */ = {
+			isa = PBXGroup;
+			children = (
+				49B1465122C9823300C06A50 /* AlertDisplayer.swift */,
+				49B1465322C9823B00C06A50 /* UIView+AddBorders.swift */,
+			);
+			path = AlertDisplayer;
+			sourceTree = "<group>";
+		};
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
+				499B4D1622CA704000ABF57C /* AlertDisplayer */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for AlertDisplayer */,
 				607FACE81AFB9204008FA782 /* Tests */,
@@ -92,8 +102,6 @@
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
-				49B1465122C9823300C06A50 /* AlertDisplayer.swift */,
-				49B1465322C9823B00C06A50 /* UIView+AddBorders.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,

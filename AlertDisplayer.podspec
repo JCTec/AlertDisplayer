@@ -9,7 +9,8 @@
 Pod::Spec.new do |s|
   s.name             = 'AlertDisplayer'
   s.version          = '0.1.0'
-  s.summary          = 'AlertDisplayer is a custom UIView Written In Swift that display a view with 1 label with a title, 1 exit image and 2 posible button. Everything customizable through a delegate.'
+  s.summary          = 'AlertDisplayer is a custom UIView Written In Swift that display an alert.'
+  s.swift_versions = '4.0'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +19,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+AlertDisplayer is a custom UIView Written In Swift that display a view with 1 label with a title, 1 exit image and 2 posible button. Everything customizable through a delegate.
                        DESC
 
   s.homepage         = 'https://github.com/JCTec/AlertDisplayer'
@@ -26,7 +27,7 @@ TODO: Add long description of the pod here.
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'JCTec' => 'jc_estevezr@hotmail.com' }
   s.source           = { :git => 'https://github.com/JCTec/AlertDisplayer.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.social_media_url = 'https://twitter.com/EstevezrJc'
 
   s.ios.deployment_target = '10.3'
 
