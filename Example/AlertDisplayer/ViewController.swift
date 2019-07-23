@@ -71,6 +71,10 @@ extension ViewController: AlertDisplayerDelegate{
         print("didPressCancelDelegate")
         self.dismiss(animated: true, completion: nil)
     }
+
+    func didSelectMainImage() {
+        print("didSelectMainImage ViewController")
+    }
     
     /*func alertDisplayerWillAppear() {
         print("alertDisplayerWillAppear")

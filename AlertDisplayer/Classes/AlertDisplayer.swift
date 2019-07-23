@@ -15,6 +15,7 @@ public protocol AlertDisplayerDelegate: class {
     
     func setFont(to label: UILabel)
     func setBoldFont(to label: UILabel)
+    func didSelectMainImage()
     func alertDisplayerDidLoad()
     func alertDisplayerWillAppear()
     func didPressOk()
@@ -22,6 +23,10 @@ public protocol AlertDisplayerDelegate: class {
 }
 
 public extension AlertDisplayerDelegate{
+    
+    func didSelectMainImage(){
+        print("didSelectMainImage")
+    }
     
     func alertDisplayerWillAppear(){
         print("alertDisplayerWillAppear")
@@ -167,13 +172,17 @@ public class AlertDisplayer: UIView{
         if image != nil{
             heightToUse += 120
             
+            let tap = UITapGestureRecognizer(target: self, action: #selector(self.didSelectImage))
+            tap.cancelsTouchesInView = true
+            
             self.mainImage = UIImageView(image: image!)
             self.mainImage.clipsToBounds = true
             self.mainImage.translatesAutoresizingMaskIntoConstraints = false
             self.mainImage.contentMode = .scaleAspectFill
-            
             self.mainImage.layer.cornerRadius = self.cornerRadius
             self.mainImage.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
+            self.mainImage.isUserInteractionEnabled = true
+            self.mainImage.addGestureRecognizer(tap)
             
             self.mainStack.insertArrangedSubview(self.mainImage, at: 0)
             self.constraintsToAdd.append(self.mainImage.heightAnchor.constraint(equalTo: self.topView.heightAnchor, multiplier: 1.0))
@@ -222,6 +231,11 @@ public class AlertDisplayer: UIView{
     @objc private func didSelectRight(){
         print("didPressOk")
         delegate?.didPressOk()
+    }
+    
+    @objc private func didSelectImage(){
+        print("didSelectImage")
+        delegate?.didSelectMainImage()
     }
     
     public func setUpButtons(_ first: String!, _ second: String? = nil){
