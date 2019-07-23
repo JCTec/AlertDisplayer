@@ -46,7 +46,8 @@ public class AlertDisplayer: UIView{
     public var buttonStack: UIStackView!
     public var mainStack: UIStackView!
     public var topView: UIView!
-    
+    public var mainImage: UIImageView!
+
     public lazy var leftButton: UIButton! = {
         let button = UIButton()
         button.addTarget(self, action: #selector(self.didSelectLeft), for: .touchUpInside)
@@ -146,7 +147,7 @@ public class AlertDisplayer: UIView{
         self.contentView.bringSubview(toFront: self.mainStack)
     }
     
-    public func configureWith(_ delegate: AlertDisplayerDelegate, _ width: CGFloat? = nil,_ height: CGFloat? = nil){
+    public func configureWith(_ delegate: AlertDisplayerDelegate, _ width: CGFloat? = nil,_ height: CGFloat? = nil, _ image: UIImage? = nil){
         self.delegate = delegate
         self.delegate?.setUpButtons()
         self.delegate?.setBoldFont(to: self.boldLabel)
@@ -154,6 +155,20 @@ public class AlertDisplayer: UIView{
         self.delegate?.alertDisplayerDidLoad()
         
         self.exitImage = self.delegate?.setExitImage()
+        
+        var heightToUse: CGFloat = height ?? 250
+        
+        if image != nil{
+            heightToUse += 150
+            
+            self.mainImage = UIImageView(image: image!)
+            self.mainImage.clipsToBounds = true
+            self.mainImage.translatesAutoresizingMaskIntoConstraints = false
+            self.mainImage.contentMode = .scaleAspectFill
+            
+            self.mainStack.insertArrangedSubview(self.mainImage, at: 1)
+            self.constraintsToAdd.append(self.mainImage.heightAnchor.constraint(equalTo: self.topView.heightAnchor, multiplier: 1.0))
+        }
         
         if(self.exitImage != nil){
             self.imageView = UIImageView(image: self.exitImage!)
@@ -181,7 +196,7 @@ public class AlertDisplayer: UIView{
         }
         
         if(height != nil){
-            self.width = height ?? 250
+            self.height = heightToUse
             self.constraintsToAdd.append(self.heightAnchor.constraint(equalToConstant: self.height))
         }
         

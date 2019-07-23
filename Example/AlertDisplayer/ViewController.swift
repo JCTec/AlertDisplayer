@@ -22,7 +22,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         self.view.backgroundColor = .clear
-        self.alertDisplayer.configureWith(self, 350, 250)
+        self.alertDisplayer.configureWith(self, 350, 200, #imageLiteral(resourceName: "hamburger"))
         
         self.view.bringSubview(toFront: self.alertDisplayer)
         // Do any additional setup after loading the view.
