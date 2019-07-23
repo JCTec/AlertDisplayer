@@ -72,6 +72,9 @@ extension ViewController: AlertDisplayerDelegate{
         self.dismiss(animated: true, completion: nil)
     }
     
+    /*func alertDisplayerWillAppear() {
+        print("alertDisplayerWillAppear")
+    }*/
     
 }
 

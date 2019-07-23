@@ -16,11 +16,17 @@ public protocol AlertDisplayerDelegate: class {
     func setFont(to label: UILabel)
     func setBoldFont(to label: UILabel)
     func alertDisplayerDidLoad()
+    func alertDisplayerWillAppear()
     func didPressOk()
     func didPressCancel()
 }
 
 public extension AlertDisplayerDelegate{
+    
+    func alertDisplayerWillAppear(){
+        print("alertDisplayerWillAppear")
+    }
+    
     func setExitImage() -> UIImage?{
         return nil
     }
@@ -204,6 +210,8 @@ public class AlertDisplayer: UIView{
         }
         
         NSLayoutConstraint.activate(self.constraintsToAdd)
+        
+        self.delegate?.alertDisplayerWillAppear()
     }
     
     @objc private func didSelectLeft(){

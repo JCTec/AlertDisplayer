@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'AlertDisplayer'
-  s.version          = '0.2.2'
+  s.version          = '0.2.3'
   s.summary          = 'AlertDisplayer is a custom UIView Written In Swift that display an alert.'
   s.swift_versions = '4.0'
   

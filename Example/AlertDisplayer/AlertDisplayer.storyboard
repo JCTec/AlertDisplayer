@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Gno-iB-qHt">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="57h-rB-rU6">
+            <objects>
+                <viewController id="Gno-iB-qHt" customClass="ViewController" customModule="AlertDisplayer_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LMT-pP-zEi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tjK-gV-Tp7">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" red="0.66274509803921566" green="0.66424006219999998" blue="0.66423153879999997" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gon-sY-V81" customClass="AlertDisplayer" customModule="AlertDisplayer">
+                                <rect key="frame" x="32" y="323" width="350" height="250"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" placeholder="YES" id="gMM-W6-jSa"/>
+                                    <constraint firstAttribute="width" constant="350" placeholder="YES" id="htU-mf-MrS"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="tjK-gV-Tp7" firstAttribute="leading" secondItem="LMT-pP-zEi" secondAttribute="leading" id="3fO-m2-BCZ"/>
+                            <constraint firstAttribute="bottom" secondItem="tjK-gV-Tp7" secondAttribute="bottom" id="LyC-zP-Hiw"/>
+                            <constraint firstItem="gon-sY-V81" firstAttribute="centerY" secondItem="LMT-pP-zEi" secondAttribute="centerY" id="V95-ui-A1M"/>
+                            <constraint firstItem="tjK-gV-Tp7" firstAttribute="top" secondItem="LMT-pP-zEi" secondAttribute="top" id="cp7-nu-vNk"/>
+                            <constraint firstAttribute="trailing" secondItem="tjK-gV-Tp7" secondAttribute="trailing" id="oM1-Vx-TZV"/>
+                            <constraint firstItem="gon-sY-V81" firstAttribute="centerX" secondItem="LMT-pP-zEi" secondAttribute="centerX" id="yYP-h1-jc5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="QSU-nA-3b9"/>
+                    </view>
+                    <connections>
+                        <outlet property="alertDisplayer" destination="gon-sY-V81" id="uXw-FG-S9f"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3mF-Q9-gE4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="992" y="-26"/>
+        </scene>
+    </scenes>
+</document>

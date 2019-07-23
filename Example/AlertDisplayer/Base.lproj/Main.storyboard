@@ -35,7 +35,7 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="25.0"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="fD5-pA-vQf" kind="presentation" modalPresentationStyle="overFullScreen" modalTransitionStyle="crossDissolve" id="Qos-VR-Wve"/>
+                                    <segue destination="fD8-dB-W58" kind="presentation" identifier="alertDisplayer" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="Emr-bM-Ipj"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Copyright (c) 2015 Juan Carlos Estévez. All rights reserved." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="E2m-eh-42B">
@@ -60,48 +60,13 @@
             </objects>
             <point key="canvasLocation" x="278" y="-35"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="va3-DP-oP8">
+        <!--AlertDisplayer-->
+        <scene sceneID="w7j-ET-VBm">
             <objects>
-                <viewController id="fD5-pA-vQf" customClass="ViewController" customModule="AlertDisplayer_Example" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="aQP-2w-ETr"/>
-                        <viewControllerLayoutGuide type="bottom" id="1tX-8q-ONz"/>
-                    </layoutGuides>
-                    <view key="view" alpha="0.0" contentMode="scaleToFill" id="WDj-nK-ide">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gTB-dL-MSB">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="0.2559663955479452" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ocF-Ox-iTe" customClass="AlertDisplayer" customModule="AlertDisplayer">
-                                <rect key="frame" x="37.5" y="208.5" width="300" height="250"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="300" placeholder="YES" id="thU-uq-te9"/>
-                                    <constraint firstAttribute="height" constant="250" placeholder="YES" id="xm4-qz-4ci"/>
-                                </constraints>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="gTB-dL-MSB" secondAttribute="trailing" id="E5G-nn-eZC"/>
-                            <constraint firstAttribute="bottom" secondItem="gTB-dL-MSB" secondAttribute="bottom" id="Jxf-RO-a4O"/>
-                            <constraint firstItem="gTB-dL-MSB" firstAttribute="leading" secondItem="WDj-nK-ide" secondAttribute="leading" id="djz-S3-rlt"/>
-                            <constraint firstItem="ocF-Ox-iTe" firstAttribute="centerX" secondItem="WDj-nK-ide" secondAttribute="centerX" id="mF1-Ty-Uqa"/>
-                            <constraint firstItem="ocF-Ox-iTe" firstAttribute="centerY" secondItem="WDj-nK-ide" secondAttribute="centerY" id="vFY-jh-Z1h"/>
-                            <constraint firstItem="gTB-dL-MSB" firstAttribute="top" secondItem="WDj-nK-ide" secondAttribute="top" id="vf3-LA-fad"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="alertDisplayer" destination="ocF-Ox-iTe" id="4E4-mc-BsD"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="upT-3N-D2O" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="AlertDisplayer" id="fD8-dB-W58" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VME-g0-x1F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1085.5999999999999" y="-36.431784107946029"/>
+            <point key="canvasLocation" x="910" y="-35"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ImY-Pq-6uI">
