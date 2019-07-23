@@ -159,14 +159,17 @@ public class AlertDisplayer: UIView{
         var heightToUse: CGFloat = height ?? 250
         
         if image != nil{
-            heightToUse += 150
+            heightToUse += 120
             
             self.mainImage = UIImageView(image: image!)
             self.mainImage.clipsToBounds = true
             self.mainImage.translatesAutoresizingMaskIntoConstraints = false
             self.mainImage.contentMode = .scaleAspectFill
             
-            self.mainStack.insertArrangedSubview(self.mainImage, at: 1)
+            self.mainImage.layer.cornerRadius = self.cornerRadius
+            self.mainImage.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
+            
+            self.mainStack.insertArrangedSubview(self.mainImage, at: 0)
             self.constraintsToAdd.append(self.mainImage.heightAnchor.constraint(equalTo: self.topView.heightAnchor, multiplier: 1.0))
         }
         
