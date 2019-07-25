@@ -23,7 +23,8 @@ class ViewController: UIViewController {
         
         self.view.backgroundColor = .clear
         
-        self.alertDisplayer.decorations = .blue
+        self.alertDisplayer.decorations = .lightGray
+        self.alertDisplayer.textColor = .black
         
         self.alertDisplayer.configureWith(self, 350, 200, #imageLiteral(resourceName: "hamburger"))
         

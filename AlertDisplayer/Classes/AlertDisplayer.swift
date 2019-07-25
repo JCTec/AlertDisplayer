@@ -54,6 +54,8 @@ public class AlertDisplayer: UIView{
     
     public var decorations: UIColor = UIColor(red:0.24, green:0.84, blue:0.44, alpha:1)
     
+    public var textColor: UIColor = .black
+
     public var width: CGFloat = 350.0
     
     public var height: CGFloat = 200.0
@@ -261,8 +263,9 @@ public class AlertDisplayer: UIView{
         if(second == nil){
             self.leftButton.isHidden = true
             self.rightButton.setTitle(first, for: .normal)
-            self.rightButton.setTitleColor(self.decorations, for: .normal)
-            
+            self.rightButton.setTitleColor(self.textColor, for: .normal)
+            self.rightButton.titleLabel?.textColor = self.textColor
+
             self.topBorder.backgroundColor = self.decorations
             self.rightBorder.backgroundColor = UIColor.white.withAlphaComponent(0.0)
             self.leftBorder.backgroundColor = UIColor.white.withAlphaComponent(0.0)
@@ -277,8 +280,12 @@ public class AlertDisplayer: UIView{
             self.leftButton.isHidden = false
             self.rightButton.setTitle(second, for: .normal)
             self.leftButton.setTitle(first, for: .normal)
-            self.rightButton.setTitleColor(self.decorations, for: .normal)
-            self.leftButton.setTitleColor(self.decorations, for: .normal)
+            
+            self.rightButton.titleLabel?.textColor = self.textColor
+            self.leftButton.titleLabel?.textColor = self.textColor
+
+            self.rightButton.setTitleColor(self.textColor, for: .normal)
+            self.leftButton.setTitleColor(self.textColor, for: .normal)
 
             self.topBorder.backgroundColor = self.decorations
             self.rightBorder.backgroundColor = self.decorations
