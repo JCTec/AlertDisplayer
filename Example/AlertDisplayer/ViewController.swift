@@ -28,7 +28,7 @@ class ViewController: UIViewController {
         
         self.alertDisplayer.configureWith(self, 350, 200, #imageLiteral(resourceName: "hamburger"))
         
-        self.view.bringSubview(toFront: self.alertDisplayer)
+        self.view.bringSubviewToFront(self.alertDisplayer)
         // Do any additional setup after loading the view.
     }
     

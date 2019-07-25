@@ -168,8 +168,8 @@ public class AlertDisplayer: UIView{
         self.setUpConstraints()
         
         self.addSubview(self.contentView)
-        self.bringSubview(toFront: self.contentView)
-        self.contentView.bringSubview(toFront: self.mainStack)
+        self.bringSubviewToFront(self.contentView)
+        self.contentView.bringSubviewToFront(self.mainStack)
     }
     
     public func configureWith(_ delegate: AlertDisplayerDelegate, _ width: CGFloat? = nil,_ height: CGFloat? = nil, _ image: UIImage? = nil){
@@ -222,7 +222,7 @@ public class AlertDisplayer: UIView{
             self.constraintsToAdd.append(self.imageView.heightAnchor.constraint(equalToConstant: 50))
             
             self.contentView.addSubview(self.imageView)
-            self.contentView.bringSubview(toFront: self.imageView)
+            self.contentView.bringSubviewToFront(self.imageView)
             
             self.constraintsToAdd.append(self.imageView.centerYAnchor.constraint(equalTo: self.contentView.topAnchor, constant: 5.0))
             self.constraintsToAdd.append(self.imageView.centerXAnchor.constraint(equalTo: self.contentView.trailingAnchor, constant: -5.0))
