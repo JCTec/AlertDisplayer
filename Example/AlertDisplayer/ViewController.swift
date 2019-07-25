@@ -22,6 +22,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         self.view.backgroundColor = .clear
+        
+        self.alertDisplayer.decorations = .blue
+        
         self.alertDisplayer.configureWith(self, 350, 200, #imageLiteral(resourceName: "hamburger"))
         
         self.view.bringSubview(toFront: self.alertDisplayer)
@@ -31,6 +34,14 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: AlertDisplayerDelegate{
+    
+    /*func quantyOfExtraSpaceForImage() -> CGFloat {
+        return 120.0
+    }*/
+    
+    func mainImageHightMultiplier() -> CGFloat{
+        return 1.0
+    }
     
     func setUpButtons() {
         self.alertDisplayer.setUpButtons("Aceptar")

@@ -13,6 +13,9 @@ public protocol AlertDisplayerDelegate: class {
     func setExitImage() -> UIImage?
     func setUpButtons()
     
+    func mainImageHightMultiplier() -> CGFloat
+    func quantyOfExtraSpaceForImage() -> CGFloat
+
     func setFont(to label: UILabel)
     func setBoldFont(to label: UILabel)
     func didSelectMainImage()
@@ -23,6 +26,14 @@ public protocol AlertDisplayerDelegate: class {
 }
 
 public extension AlertDisplayerDelegate{
+    
+    func mainImageHightMultiplier() -> CGFloat{
+        return 1.0
+    }
+    
+    func quantyOfExtraSpaceForImage() -> CGFloat{
+        return 120.0
+    }
     
     func didSelectMainImage(){
         print("didSelectMainImage")
@@ -58,7 +69,8 @@ public class AlertDisplayer: UIView{
     public var mainStack: UIStackView!
     public var topView: UIView!
     public var mainImage: UIImageView!
-
+    public var topConstraint: NSLayoutConstraint!
+    
     public lazy var leftButton: UIButton! = {
         let button = UIButton()
         button.addTarget(self, action: #selector(self.didSelectLeft), for: .touchUpInside)
@@ -170,7 +182,10 @@ public class AlertDisplayer: UIView{
         var heightToUse: CGFloat = height ?? 250
         
         if image != nil{
-            heightToUse += 120
+            
+            let quantityOfExtraSpaceForImage: CGFloat = self.delegate?.quantyOfExtraSpaceForImage() ?? 120.0
+            
+            heightToUse += quantityOfExtraSpaceForImage
             
             let tap = UITapGestureRecognizer(target: self, action: #selector(self.didSelectImage))
             tap.cancelsTouchesInView = true
@@ -185,7 +200,10 @@ public class AlertDisplayer: UIView{
             self.mainImage.addGestureRecognizer(tap)
             
             self.mainStack.insertArrangedSubview(self.mainImage, at: 0)
-            self.constraintsToAdd.append(self.mainImage.heightAnchor.constraint(equalTo: self.topView.heightAnchor, multiplier: 1.0))
+            
+            let multiplier: CGFloat = self.delegate?.mainImageHightMultiplier() ?? 1.0
+            
+            self.constraintsToAdd.append(self.mainImage.heightAnchor.constraint(equalTo: self.topView.heightAnchor, multiplier: multiplier))
         }
         
         if(self.exitImage != nil){
@@ -243,7 +261,9 @@ public class AlertDisplayer: UIView{
         if(second == nil){
             self.leftButton.isHidden = true
             self.rightButton.setTitle(first, for: .normal)
+            self.rightButton.setTitleColor(self.decorations, for: .normal)
             
+            self.topBorder.backgroundColor = self.decorations
             self.rightBorder.backgroundColor = UIColor.white.withAlphaComponent(0.0)
             self.leftBorder.backgroundColor = UIColor.white.withAlphaComponent(0.0)
             
@@ -257,7 +277,10 @@ public class AlertDisplayer: UIView{
             self.leftButton.isHidden = false
             self.rightButton.setTitle(second, for: .normal)
             self.leftButton.setTitle(first, for: .normal)
-            
+            self.rightButton.setTitleColor(self.decorations, for: .normal)
+            self.leftButton.setTitleColor(self.decorations, for: .normal)
+
+            self.topBorder.backgroundColor = self.decorations
             self.rightBorder.backgroundColor = self.decorations
             self.leftBorder.backgroundColor = self.decorations
             
@@ -310,7 +333,9 @@ public extension AlertDisplayer{
         self.constraintsToAdd.append(self.contentView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0.0))
         self.constraintsToAdd.append(self.contentView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0.0))
         
-        self.constraintsToAdd.append(self.mainStack.topAnchor.constraint(equalTo: self.contentView.topAnchor, constant: 0.0))
+        self.topConstraint = self.mainStack.topAnchor.constraint(equalTo: self.contentView.topAnchor, constant: 0.0)
+        
+        self.constraintsToAdd.append(self.topConstraint)
         self.constraintsToAdd.append(self.mainStack.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor, constant: 0.0))
         self.constraintsToAdd.append(self.mainStack.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor, constant: 0.0))
         self.constraintsToAdd.append(self.mainStack.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor, constant: 0.0))
